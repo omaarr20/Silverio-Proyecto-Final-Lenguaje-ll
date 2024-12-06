@@ -1,0 +1,38 @@
+     
+        <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <!-- Configuración de la conexión a la base de datos -->
+    <session-factory>
+        <!-- URL de la base de datos -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sakila?useSSL=false</property>
+        
+        <!-- Usuario de la base de datos -->
+        <property name="hibernate.connection.username">root</property>
+        
+        <!-- Contraseña de la base de datos -->
+        <property name="hibernate.connection.password">Oracle123#</property>
+        
+        <!-- Driver JDBC para MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+        <!-- Dialecto de Hibernate para MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        
+        <!-- Configuración para mostrar las SQL generadas en consola (opcional) -->
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- Formato de las fechas en la base de datos -->
+        <property name="hibernate.format_sql">true</property>
+        
+        <!-- Control de las transacciones -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+        <!-- Activar el modo de actualización (opcional para el desarrollo) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- Validación del esquema (opcional para el desarrollo) -->
+        <property name="hibernate.validator.apply_to_ddl">true</property>
+    </session-factory>
+
+</hibernate-configuration>
